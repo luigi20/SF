@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Secret Friend</string>
+    <string name ="raffleActionBar"> Raffle</string>
+    <string name="about">About</string>
+    <string name="raffle">Raffle</string>
+    <string name="addPerson">ADD PERSONS</string>
+    <string name="warningMessageAddPerson">Add People Secret Friend</string>
+    <string name = "listSecretFriendBeforeRaffle">It is only possible See Your Secret Friend After clicking the button Raffle</string>
+    <string name="messageAfterRaffleOneMoreTime">Draw It was Effected !!!</string>
+    <string name="emptyList">No or Only One Person Registered in Secret Friend !!!</string>
+    <string name="yourSecretFriend1">The Secret Friend of</string>
+    <string name="yourSecretFriend2"> is </string>
+    <string name="successRaffle">Effected draw !!! Click Your Name To Know Your Secret Friend !!!</string>
+    <string name="password">Password</string>
+    <string name="passwordmessage">Enter Password</string>
+    <string name="passwordmessageerror">Wrong Password !!!</string>
+</resources>

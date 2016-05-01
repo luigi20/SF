@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#fff"
+    tools:context=".Controller.Controller.TGroup">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#1181ab"
+        android:hint="@string/addPerson"
+        android:maxLength="20"
+        android:layout_weight="0"
+        android:ems="5"
+        android:textColor="#1181ab"
+        android:id="@+id/edtPerson"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/listSecretFriend"
+        android:layout_alignEnd="@+id/listSecretFriend"
+        android:layout_marginRight="63dp"
+        android:layout_marginEnd="63dp" />
+
+    <requestFocus />
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listSecretFriend"
+        android:background="#1181ab"
+        android:divider="#fff"
+        android:dividerHeight="16dp"
+        android:layout_weight="1"
+        android:layout_below="@+id/edtPerson"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp"
+        android:layout_above="@+id/btRaffle" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_add"
+        android:layout_weight="1"
+        android:src="@drawable/ic_add"
+        android:layout_above="@+id/listSecretFriend"
+        android:layout_alignRight="@+id/listSecretFriend"
+        android:layout_alignEnd="@+id/listSecretFriend"
+        android:onClick="onClick" />
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="@string/raffle"
+        android:id="@+id/btRaffle"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickRaffle" />
+
+
+</RelativeLayout>
