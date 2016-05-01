@@ -1,3 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_6c9d2eb5c32f1b5b733ccb2f0e16f126bd10502f.jar" />
+    </item>
+    <item
+        jar="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_fe31321f905ae370db50625b6b2aa56b9be2bed1.jar" />
+    </item>
+    <item
+        jar="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_1c57ed63924d7f64de024051b52ffe8751c2953f.jar" />
+    </item>
+    <item
+        jar="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_a9014e70db256e9e9d52b11e5dec0fe3d5d91d93.jar" />
+    </item>
+    <item
+        jar="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_f33c6bcf4b9f9165a8131ec5d0ed5bf74f622865.jar" />
+    </item>
+    <item
+        jar="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1ab82cd5ae99e4faaec1d8dbbadfee8dc49c9842">
+        <dex dex="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\pre-dexed\debug\instant-run_ff603bd8a3a793b7f53f3e90536bd001e820d60f.jar" />
+    </item>
+    <item
+        jar="C:\Users\L\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_0ba13e2d1a3e1bc33deab9a595acef6260824143.jar" />
+    </item>
+    <item
+        jar="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3dfdd1f4eeaeee90a60487d4023d67d9eed15c5c">
+        <dex dex="C:\Users\L\AndroidProjects\SecretFriend\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_e7a9f85d13f2f6c2d21dba958546e532c61e8ea8.jar" />
+    </item>
+
+</items>
