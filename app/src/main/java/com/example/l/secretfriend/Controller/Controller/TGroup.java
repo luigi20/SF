@@ -4,10 +4,9 @@ package com.example.l.secretfriend.Controller.Controller;
  * Created by L on 24/04/2016.
  */
 
+
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -17,25 +16,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Random;
-
 import com.example.l.secretfriend.R;
-
 import Model.Person;
 
 public class TGroup extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
 
     private ArrayList<Person> listSecretFriend = new ArrayList<Person>();
     private int count = 0;
+    private Person personClick;//atributo da classe.
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,11 +62,11 @@ public class TGroup extends AppCompatActivity implements View.OnClickListener, A
             case android.R.id.home:
                 finish();
                 break;
-            case R.id.Sorteio:
+            case R.id.Sobre:
                 //    Toast.makeText(this, "Item: " + item.getItemId(), Toast.LENGTH_SHORT).show();
                 break;
 
-            case R.id.Sobre:
+            case R.id.Ajuda:
                 //  Toast.makeText(this, "Item: " + item.getItemId(), Toast.LENGTH_SHORT).show();
                 break;
 
@@ -92,30 +87,71 @@ public class TGroup extends AppCompatActivity implements View.OnClickListener, A
     @Override
     public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
 
-        if (count > 0)
-        {
-            ListView listSecret = (ListView) findViewById(R.id.listSecretFriend);
+        if (count > 0) {
 
-            final ArrayAdapter<Person> adapter = new ArrayAdapter<Person>(this, R.layout.support_simple_spinner_dropdown_item, listSecretFriend);
-            listSecret.setAdapter(adapter);
-            Person person = adapter.getItem(position);
-            if(!person.getAmigoSecreto().getNome().isEmpty())
-            {
-                Message(this.getString(R.string.yourSecretFriend1) +" "  + person.getNome() +" "+
-                        this.getString(R.string.yourSecretFriend2)+" "  + person.getAmigoSecreto().getNome());
-            }
 
-        }
-        else
-        {
+            exemplo_alerta(position);
+
+
+        }else{
             Message(this.getString(R.string.listSecretFriendBeforeRaffle));
         }
+
+    }
+
+    private void exemplo_alerta(int position) {
+
+        ListView listSecret = (ListView) findViewById(R.id.listSecretFriend);
+
+        final ArrayAdapter<Person> adapter = new ArrayAdapter<Person>(this, R.layout.support_simple_spinner_dropdown_item, listSecretFriend);
+        listSecret.setAdapter(adapter);
+        final Person person = adapter.getItem(position);
+        personClick = person;
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(TGroup.this);
+        alertDialog.setTitle(getString(R.string.password));
+        alertDialog.setMessage(getString(R.string.addPassword));
+        final EditText input = new EditText(TGroup.this);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+        input.setLayoutParams(lp);
+        input.requestFocus();
+        alertDialog.setView(input);
+        alertDialog.setIcon(R.drawable.ic_secretfriend);
+
+        alertDialog.setPositiveButton(this.getString(R.string.ok),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        String password="";
+                        password = input.getText().toString();
+                        if (!password.toString().trim().isEmpty()) {
+                            if (password.equals(personClick.getSenha())) {
+                                Message(getApplicationContext().getString(R.string.yourSecretFriend1) +" "  + person.getNome() +" "+
+                                        (getApplicationContext().getString(R.string.yourSecretFriend2)+" "  + person.getAmigoSecreto().getNome()));
+
+                            } else {
+                                Message(getApplicationContext().getString(R.string.passwordmessageerror));
+                            }
+                        }
+                    }
+                });
+
+        alertDialog.setNegativeButton(this.getString(R.string.cancel),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+        alertDialog.show();
     }
 
 
-    @Override
-    public void onClick(View v) {
 
+
+
+
+    public void AddPerson(){
 
         ListView listSecret = (ListView) findViewById(R.id.listSecretFriend);
         // definindo a implementação ArrayAdapter como ListAdapter da ListView
@@ -123,12 +159,14 @@ public class TGroup extends AppCompatActivity implements View.OnClickListener, A
         listSecret.setAdapter(adapter);
         // recuperando o texto digitado pelo usuario
         EditText edtPerson = (EditText) findViewById(R.id.edtPerson);
+        EditText edtPassword = (EditText) findViewById(R.id.edtPassword);
         Person secretFriend = new Person(edtPerson.getText().toString());
+        secretFriend.setSenha(edtPassword.getText().toString());
         // caso o texto for preenchido, adiciona na lista e atualiza o adapter
         // caso contrario exibe uma mensagem solicitando ao usuário que digite uma série
-        if ((!edtPerson.getText().toString().trim().isEmpty()))
-        {
+        if ((!edtPerson.getText().toString().trim().isEmpty()) && (!edtPassword.getText().toString().trim().isEmpty())) {
             edtPerson.setText("");
+            edtPassword.setText("");
             edtPerson.findFocus();
             listSecretFriend.add(secretFriend);
             adapter.notifyDataSetChanged();
@@ -136,6 +174,20 @@ public class TGroup extends AppCompatActivity implements View.OnClickListener, A
         else
         {
             Message(this.getString(R.string.warningMessageAddPerson));
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        if(count <=0) {
+            this.AddPerson();
+        }
+        else
+        {
+            listSecretFriend.clear();
+            this.count = 0;
+            this.AddPerson();
         }
 
     }

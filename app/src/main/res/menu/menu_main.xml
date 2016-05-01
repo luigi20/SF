@@ -4,17 +4,17 @@
     tools:context="com.example.l.secretfriend.Controller.Controller.TGroup">
 
     <item
-        android:id="@+id/Sorteio"
-        android:orderInCategory="1"
-
-        android:title="@string/raffle"
-        app:showAsAction="always"/>
-
-    <item
         android:id="@+id/Sobre"
         android:orderInCategory="1"
 
         android:title="@string/about"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/Ajuda"
+        android:orderInCategory="1"
+
+        android:title="@string/help"
         app:showAsAction="always"/>
 
 </menu>

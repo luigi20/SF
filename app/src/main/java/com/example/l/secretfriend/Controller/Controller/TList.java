@@ -2,7 +2,10 @@ package com.example.l.secretfriend.Controller.Controller;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.content.Intent;
+import android.support.v7.app.ActionBar;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.ListView;
 
 import com.example.l.secretfriend.R;
 
@@ -12,22 +15,38 @@ import com.example.l.secretfriend.R;
 public class TList extends Activity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.v_list);
-        Intent intent = getIntent();
+        setContentView(R.layout.v_group);
+        //ActionBar actionBar = getSupportActionBar();
 
+      //  actionBar.setDisplayHomeAsUpEnabled(true);
 
+        ImageView btAdd = (ImageView) findViewById(R.id.bt_add);
+        ListView listSecret = (ListView) findViewById(R.id.listSecretFriend);
+        //btAdd.setOnClickListener(this);
+        //listSecret.setOnItemClickListener(this);
 
-        if(intent!= null)
-        {
-            Bundle params = intent.getExtras();
-            if(params != null) {
-             //   String nome = params.getString("nomeGrupo");
-               // TextView nomeView = (TextView) findViewById(R.id.nomeTexto);
-                //nomeView.setText(nome);
+    }
 
-            }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+            case R.id.Sobre:
+                //    Toast.makeText(this, "Item: " + item.getItemId(), Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.Ajuda:
+                //  Toast.makeText(this, "Item: " + item.getItemId(), Toast.LENGTH_SHORT).show();
+                break;
+
         }
+        return true;
+
+
     }
 }

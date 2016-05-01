@@ -7,7 +7,8 @@ public class Person {
 
 
     private String nome;
-
+    private Person amigoSecreto;
+    private String senha;
 
     @Override
     public boolean equals(Object o) {
@@ -29,7 +30,14 @@ public class Person {
         return result;
     }
 
-    private Person amigoSecreto;
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 
     public Person(String nome) {
         this.nome = nome;

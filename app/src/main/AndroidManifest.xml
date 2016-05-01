@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Controller.Controller.TList"/>
+
     </application>
 
 </manifest>

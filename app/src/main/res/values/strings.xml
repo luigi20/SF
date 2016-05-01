@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">Amigo Secreto</string>
     <string name ="raffleActionBar"> Sorteio</string>
+    <string name="addPassword">ENTRE COM A SENHA</string>
     <string name="about">Sobre</string>
     <string name="raffle">Sortear</string>
-    <string name="addPerson">ADICIONAR PESSOAS</string>
+    <string name="addPerson">ADICIONAR NOME</string>
     <string name="warningMessageAddPerson">Digite Seu Nome e Senha !!!</string>
-    <string name = "listSecretFriendBeforeRaffle">Só é Possível Ver Seu Amigo Secreto Após Clicar No Botão Sortear</string>
+    <string name="listSecretFriendBeforeRaffle">Só é Possível Ver Seu Amigo Secreto Após Clicar No Botão Sortear</string>
     <string name="messageAfterRaffleOneMoreTime">Sorteio Já Foi Efetuado !!!</string>
     <string name="emptyList">Nenhuma ou Apenas Uma Pessoa Cadastrada No Amigo Secreto !!!</string>
     <string name="yourSecretFriend1">O Amigo Secreto de</string>
@@ -14,7 +15,9 @@
     <string name="password">Senha</string>
     <string name="passwordmessage">Entre Com A Senha</string>
     <string name="passwordmessageerror">Senha Errada !!!</string>
-    <string name="sim">SIM</string>
-    <string name="nao">NÃO</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="help">AJUDA</string>
+    <string name="version">Versão 1.0</string>
 
 </resources>
